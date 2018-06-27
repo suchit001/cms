@@ -1,0 +1,25 @@
+
+
+{% extends 'base.html' %}
+
+{% block body %}
+<body>
+<p>Details:</p>
+<table cellspacing="100px" class="ut">
+    <tr>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Bithday</th>
+    <th>Email</th>
+    </tr>
+{% for user in users %}
+    <tr align="center">
+        <td>{{ user.username}}</td>
+        <td>{{ user.gender}}</td>
+        <td>{{ user.bd}}</td>
+        <td>{{ user.email}}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+{% endblock %}
