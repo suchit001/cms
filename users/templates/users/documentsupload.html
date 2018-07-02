@@ -1,0 +1,27 @@
+
+
+{% extends 'base.html' %}
+
+
+{% block title %}Sign Up{% endblock %}
+
+{% block body %}
+<div class="form">
+  <h1>Documents</h1>
+    <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="tag">
+        {{ field.label_tag }}
+    </div>
+    <div class="documents">
+    {{ field }}
+    </div>
+    {% endfor %}
+    <br>
+    <br>
+    <button type="submit">Save</button>
+    </form>
+</div>
+{% endblock %}
+

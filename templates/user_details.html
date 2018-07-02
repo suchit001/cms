@@ -7,20 +7,20 @@
 {% block body %}
 
 <div class="form">
-  <h1>Sign up</h1>
-  <form method="post" enctype="multipart/form-data">
+  <h1>Personal Details</h1>
+  <form>
     {% csrf_token %}
-    <!--{% for field in form %}
+    {% for field in form %}
     <div class="tag" >
       {{ field.label_tag}}
     </div>
     <div class="field">
       {{ field }}
+        <input type="text">
     </div>
-    {% endfor %}-->
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
+    {% endfor %}
+    <!--{{ form.as_p }-->
+    <button type="submit">Save</button>
   </form>
-</div>
 </div>
 {% endblock %}
